@@ -25,7 +25,6 @@ async def r(ctx):
     await ctx.send('Please select your state', view=view_state, delete_after=20)
     view_state2 = State2()
     await ctx.send(view=view_state2, delete_after=20)
-    await view_state2.wait()
     view_branch = Branch()
     await ctx.send('Please select your Branch',view=view_branch)
     await view_branch.wait()
