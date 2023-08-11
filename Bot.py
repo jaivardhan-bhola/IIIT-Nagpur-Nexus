@@ -36,7 +36,4 @@ async def r(ctx):
     message = await ctx.fetch_message(ctx.message.id)
     await message.delete()
 
-async def verify(ctx):
-    embed = discord.Embed(title="Verification", description="Please click on the button below to verify yourself")
-    await ctx.send(embed=embed, view=Verification())
 bot.run(os.environ['IIITN_TOKEN'])
