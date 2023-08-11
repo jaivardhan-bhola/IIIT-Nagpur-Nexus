@@ -403,17 +403,3 @@ class Specialization(discord.ui.View):
         await interaction.user.add_roles(discord.utils.get(interaction.guild.roles, name=self.value))
         await interaction.message.delete()
         self.stop()
-
-class Batch(discord.ui.View):
-    def __init__(self):
-        super().__init__()
-        self.value = None
-    
-    @discord.ui.button(label="2027", style=discord.ButtonStyle.green)
-    async def batch_2027(self, interaction: discord.Interaction, button: discord.ui.Button):
-        self.value = '2027'
-        await interaction.response.send_message(f'You selected {self.value}', ephemeral=True)
-        await interaction.user.add_roles(discord.utils.get(interaction.guild.roles, name=self.value))
-        await interaction.message.delete()
-        self.stop()
-    
