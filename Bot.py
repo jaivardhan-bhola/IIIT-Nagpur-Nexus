@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import os
 from Roles import Pronouns, State, State2, Branch, Specialization
-from Verify import Verification
 
 class Bot(commands.Bot):
     def __init__(self):
