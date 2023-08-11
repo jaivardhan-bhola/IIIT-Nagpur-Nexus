@@ -4,8 +4,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
   return "alive"
-def rün():
+def run():
  app.run(host='0.0.0.0',port=8080)
-def keep_alove():
-  t = Thread(target=rün)
+def keep_alive():
+  t = Thread(target=run)
   t.start()
