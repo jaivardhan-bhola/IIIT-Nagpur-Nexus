@@ -1,9 +1,7 @@
 import discord
 from discord.ext import commands
 import os
-from dotenv import load_dotenv
 from Roles import Pronouns, State, State2, Branch, Specialization
-load_dotenv()
 
 class Bot(commands.Bot):
     def __init__(self):
@@ -35,4 +33,4 @@ async def r(ctx):
     message = await ctx.fetch_message(ctx.message.id)
     await message.delete()
 
-bot.run(os.getenv('TOKEN'))
+bot.run(os.environ['IIITN_TOKEN'])
