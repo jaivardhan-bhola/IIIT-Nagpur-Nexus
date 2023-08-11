@@ -3,6 +3,9 @@ from discord.ext import commands
 import os
 from Roles import Pronouns, State, State2, Branch, Specialization
 
+from keep_alive import keep_alive
+keep_alive()
+
 class Bot(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix='>', intents=discord.Intents.all())
