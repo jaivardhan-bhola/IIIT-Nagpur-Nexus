@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import os
 from Roles import Pronouns, State, State2, Branch, Specialization
+from Verify import Verification
 
 class Bot(commands.Bot):
     def __init__(self):
@@ -33,4 +34,7 @@ async def r(ctx):
     message = await ctx.fetch_message(ctx.message.id)
     await message.delete()
 
+async def verify(ctx):
+    embed = discord.Embed(title="Verification", description="Please click on the button below to verify yourself")
+    await ctx.send(embed=embed, view=Verification())
 bot.run(os.environ['IIITN_TOKEN'])
